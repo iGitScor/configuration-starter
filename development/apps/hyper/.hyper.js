@@ -4,7 +4,13 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily: [
+      '"Droid Sans Mono for powerline"',
+      'Menlo',
+      '"DejaVu Sans Mono"',
+      '"Lucida Console"',
+      'monospace',
+    ].join(','),
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.75)',
@@ -67,7 +73,13 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyperterm-electron-highlighter', 'hyperterm-title', 'hyperterm-tabs'],
+  plugins: [
+    'hyperterm-electron-highlighter',
+    'hyperterm-title',
+    'hyperterm-tabs',
+    'hyper-snazzy',
+    'hyperlinks',
+  ],
 
   // in development, you can create a directory under
   // `~/.hyperterm_plugins/local/` and include it here
